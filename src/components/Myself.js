@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center',
         fontWeight: 'bold'
     },
-    eduText: {
+    headTextBlue: {
         color: '#fff',
         textAlign: 'center',
         fontWeight: 'bold'
@@ -50,7 +50,9 @@ const useStyles = makeStyles(theme => ({
     gridTrivia: {
         padding: 10,
         margin: 'auto',
-        backgroundColor: '#5d7294'
+        backgroundColor: '#5d7294',
+        color: '#fff',
+        textAlign: 'center'
     },
     eduDiv: {
         paddingTop: 30,
@@ -78,6 +80,11 @@ const useStyles = makeStyles(theme => ({
         width: '50%',
         color: '#979597',
         textAlign: 'left'
+    },
+    footer: {
+        padding: 20,
+        margin: 'auto',
+        backgroundColor: '#fff'
     },
     spacer: {
         height: 70,
@@ -126,15 +133,15 @@ const Myself = () => {
                                 I am a Front End / Web Developer with industry experience building and maintaining website and web application. 
                                 I specialized in JavaScript and have professional experience working with HTML, CSS and React. 
                                 I am truly passionate about my work and always eager to learn new things and connect with others. 
-                                I am currently freelancing while I pursue new opportunity and can be reached either this profile or email at jungyupkim4@gmail.com. 
+                                I am currently freelancing while pursuing new opportunity and can be reached either this profile or email at jungyupkim4@gmail.com. 
                                 </p>
                             </div>
                         </div>
                     </div>
                 </Grid>
-                <Grid xs={12} className={classes.spacer} style={{ backgroundColor: '#5d7294', marginTop: '30px' }}></Grid>
+                <Grid xs={12} className={classes.spacer} style={{ backgroundColor: '#5d7294', marginTop: '25px' }}></Grid>
                 <Grid id="education" item xs={12} className={classes.gridEducation}>
-                    <Typography variant="h3" className={classes.eduText} gutterBottom>
+                    <Typography variant="h3" className={classes.headTextBlue} gutterBottom>
                         Where I Studied Programming..
                     </Typography>
                     <Grid xs={5} className={classes.eduDiv}>
@@ -230,14 +237,27 @@ const Myself = () => {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid xs={12} className={classes.spacer}></Grid>
+                <Grid xs={12} className={classes.spacer} style={{ backgroundColor: '#5d7294', marginTop: '25px' }}></Grid>
                 <Grid id="trivia" item xs={12} className={classes.gridTrivia}>
-                    <Typography variant="h3" className={classes.eduText} gutterBottom>
+                    <Typography variant="h3" className={classes.headTextBlue} gutterBottom>
                         Trivia
                     </Typography>
-                    
+                        <ul style={{ fontFamily: "Helvetica, Arial, sans-serif", width: '60%', margin: 'auto', padding:'0px', listStyleType: 'none' }}>
+                            <li style={{ marginTop: '25px' }}><i className="fa fa-futbol-o fa-lg" />  Member of Saints Slo-pitch team since 2016</li>
+                            <li style={{ marginTop: '15px' }}><i className="fa fa-users fa-lg" />  Leader of SHJP organization, prepare and lead regular meeting with other members to coordinate upcoming events</li>
+                            <li style={{ marginTop: '5px' }}></li>
+                        </ul>
                 </Grid>
-                <Grid xs={12} className={classes.spacer}></Grid>
+                <Grid xs={12} className={classes.spacer} style={{ backgroundColor: '#5d7294' }}></Grid>
+                <Grid xs={8} className={classes.footer}>
+                    <ul style={{ fontFamily: "Helvetica, Arial, sans-serif", listStyleType: 'none', textAlign: 'center', margin: '0px', padding: '0px' }}>
+                        <li style={{ display: 'inline-block', color: '#5d7294'}}><i className="fa fa-copyright fa-lg"></i>  Eddie Kim</li>
+                        <li style={{ display: 'inline-block', marginLeft: '15px', color: '#5d7294' }}><a style={{ textDecoration: 'none', color: 'inherit' }} target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jungyupkim/"><i className="fa fa-linkedin fa-3x" aria-hidden="true" /></a></li>
+                        <li style={{ display: 'inline-block', marginLeft: '15px', color: '#5d7294' }}><a style={{ textDecoration: 'none', color: 'inherit' }} target="_blank" rel="noopener noreferrer" href="https://github.com/jungyup"><i className="fa fa-github fa-3x" aria-hidden="true" /></a></li>
+                        <li style={{ display: 'inline-block', marginLeft: '15px', color: '#5d7294' }}><a style={{ textDecoration: 'none', color: 'inherit' }} href="mailto:jungyupkim4@gmail.com?Subject=Hello%20from%20you" target="_top"><i className="fa fa-inbox fa-3x" aria-hidden="true" /></a></li>
+                        <li style={{ display: 'inline-block', marginLeft: '15px', color: '#5d7294' }}><a style={{ textDecoration: 'none', color: 'inherit' }} href="tel:1-647-292-3432"><i className="fa fa-mobile fa-3x" aria-hidden="true" /></a></li>
+                    </ul>
+                </Grid>
             </Grid>
         </section>
     );

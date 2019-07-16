@@ -15,6 +15,11 @@ import rokemon_02 from '../images/rokemon_02.png';
 import rokemon_03 from '../images/rokemon_03.png';
 import rokemon_04 from '../images/rokemon_04.png';
 import rokemon_05 from '../images/rokemon_05.png';
+import spotify_01 from '../images/spotify_01.png';
+import spotify_02 from '../images/spotify_02.png';
+import spotify_03 from '../images/spotify_03.png';
+import spotify_04 from '../images/spotify_04.png';
+import spotify_05 from '../images/spotify_05.png';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -68,6 +73,19 @@ const useStyles = makeStyles(theme => ({
         padding: 10,
         float: 'left',
         cursor: 'pointer'
+    },
+    paperTitle: {
+        padding: 20,
+        color: '#979597'
+    },
+    paperSubtitle: {
+        padding: 10,
+        fontWeight: 'bold',
+        color: '#979597'
+    },
+    paperSubtitleDesc: {
+        fontStyle: 'italic',
+        color: '#979597'
     }
 }));
 
@@ -118,23 +136,23 @@ const Projects = () => {
                 <Grid item xs={12} className={classes.container}>
                     <Grid item xs={12} className={classes.projectPaper}>
                         <Paper className={classes.paper}>
-                            <Typography variant="h4" component="h3" style={{ padding: '20px' }}>
+                            <Typography variant="h4" component="h3" className={classes.paperTitle}>
                                 Personal Homepage (This website)
                             </Typography>
                             <Grid item xs={5} className={classes.innerProjectPaper}>
                                 
                             </Grid>
                             <Grid item xs={7} className={classes.innerProjectPaper}>
-                                <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px' }}>
+                                <Typography varinat="h6" className={classes.paperSubtitle}>
                                     Developed with
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     JavaScript, HTML5, CSS3, React with Redux
                                 </Typography>
                                 <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px', marginTop: '15px' }}>
                                     GitHub Link
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     <a href="https://github.com/jungyup/eddiekim-webpage">Personal Homepage GitHub Link</a>
                                 </Typography>
                                 <div style={{ padding: '15px', marginTop: '10px' }}>
@@ -145,23 +163,23 @@ const Projects = () => {
                     </Grid>
                     <Grid item xs={12} className={classes.projectPaper}>
                         <Paper className={classes.paper}>
-                            <Typography variant="h4" component="h3" style={{ padding: '20px' }}>
+                            <Typography variant="h4" component="h3" className={classes.paperTitle}>
                                 Wedding Invitation Application
                             </Typography>
-                            <Grid item xs={5} className={classes.innerProjectPaper}>
+                            <Grid item xs={6} className={classes.innerProjectPaper}>
                                 
                             </Grid>
-                            <Grid item xs={7} className={classes.innerProjectPaper}>
-                                <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px' }}>
+                            <Grid item xs={6} className={classes.innerProjectPaper}>
+                                <Typography varinat="h6" className={classes.paperSubtitle}>
                                     Developed with
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     JavaScript, HTML5, CSS3, React, Node with Express, mySQL
                                 </Typography>
                                 <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px', marginTop: '15px' }}>
                                     GitHub Link
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     <a href="https://github.com/jungyup/wedding-app">Wedding Invitation Application GitHub Link</a>
                                 </Typography>
                                 <div style={{ padding: '15px', marginTop: '10px' }}>
@@ -172,23 +190,36 @@ const Projects = () => {
                     </Grid>
                     <Grid item xs={12} className={classes.projectPaper}>
                         <Paper className={classes.paper}>
-                            <Typography variant="h4" component="h3" style={{ padding: '20px' }}>
+                            <Typography variant="h4" component="h3" className={classes.paperTitle}>
                                 Spotify Search Engine
                             </Typography>
                             <Grid item xs={5} className={classes.innerProjectPaper}>
-                                
+                            <Carousel showArrows={true} showThumbs={false}>
+                                <div>
+                                    <img src={spotify_02} alt="spotify_01" />
+                                    <p className="legend">Search for either Artist or Album</p>
+                                </div>
+                                <div>
+                                    <img src={spotify_03} alt="spotify_02" />
+                                    <p className="legend">Click Artist image to go Artist Page</p>
+                                </div>
+                                <div>
+                                    <img src={spotify_04} alt="spotify_03" />
+                                    <p className="legend">Artist page with detailed information and related Artists</p>
+                                </div>
+                                </Carousel>
                             </Grid>
                             <Grid item xs={7} className={classes.innerProjectPaper}>
-                                <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px' }}>
+                                <Typography varinat="h6" className={classes.paperSubtitle}>
                                     Developed with
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     JavaScript, HTML5, CSS3, React, Node with Express and used public API from Spotify
                                 </Typography>
                                 <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px', marginTop: '15px' }}>
                                     GitHub Link
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     <a href="https://github.com/jungyup/spotify-search">Spotify GitHub Link</a>
                                 </Typography>
                                 <div style={{ padding: '15px', marginTop: '10px' }}>
@@ -199,7 +230,7 @@ const Projects = () => {
                     </Grid>
                     <Grid item xs={12} className={classes.projectPaper}>
                         <Paper className={classes.paper}>
-                            <Typography variant="h4" component="h3" style={{ padding: '20px' }}>
+                            <Typography variant="h4" component="h3" className={classes.paperTitle}>
                                 Rokemon Encounter
                             </Typography>
                             <Grid item xs={5} className={classes.innerProjectPaper}>
@@ -220,16 +251,16 @@ const Projects = () => {
                                 {/* <img alt="rokemonImg" src={rokemon_02} style={{ width: '100%', height: '100%', padding: '10px' }} /> */}
                             </Grid>
                             <Grid item xs={7} className={classes.innerProjectPaper}>
-                                <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px' }}>
+                                <Typography varinat="h6" className={classes.paperSubtitle}>
                                     Developed with
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     JavaScript, HTML5, CSS3, React
                                 </Typography>
                                 <Typography varinat="h6" style={{ fontWeight: 'bold', padding: '10px', marginTop: '15px' }}>
                                     GitHub Link
                                 </Typography>
-                                <Typography variant="body1" style={{ fontStyle: 'italic' }}>
+                                <Typography variant="body1" className={classes.paperSubtitleDesc}>
                                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/jungyup/wild_rokemon_encounter">https://github.com/jungyup/wild_rokemon_encounter</a>
                                 </Typography>
                                 <div style={{ padding: '15px', marginTop: '10px' }}>
@@ -284,10 +315,56 @@ const Projects = () => {
                                                     <ul style={{ fontFamily: "helvetica, sans-serif, arial", fontSize: "16px" }}>
                                                         <li>This application let user to search either Artist or Album from Spotify</li>
                                                         <li style={{ marginTop: '5px' }}>When user clicks on either Artist or Album from the result will take user to either Artist or Album Page</li>
-                                                        <li style={{ marginTop: '5px' }}>The detailed Artist infromation will be available with related Artists on Artist Page</li>
-                                                        <li style={{ marginTop: '5px' }}>The detailed Album infromation will be available with Album track list on Album Page</li>
+                                                        <li style={{ marginTop: '5px' }}>The detailed Artist information will be available with related Artists on Artist Page</li>
+                                                        <li style={{ marginTop: '5px' }}>The detailed Album information will be available with Album track list on Album Page</li>
                                                         <li style={{ marginTop: '5px' }}>This application used public API from Spotify. For more information, please check <a href="https://developer.spotify.com/documentation/web-api/reference/" target="_blank" rel="noopener noreferrer">Spotify API Reference Website</a></li>
                                                     </ul>
+                                                    <Typography variant="h5" component="h6" className={classes.projectHeader}>
+                                                        Screenshots
+                                                    </Typography>
+                                                    <Grid item xs={4} className={classes.screenshot} onClick={() => handleImageOpen(spotify_01, "First")}>
+                                                        <Paper className={classes.paper}>
+                                                            <img src={spotify_01} alt="spotify_01" style={{ width: '80%', height: '80%' }} />
+                                                        </Paper>
+                                                    </Grid>
+                                                    <Grid item xs={4} className={classes.screenshot} onClick={() => handleImageOpen(spotify_02, "Second")}>
+                                                        <Paper className={classes.paper}>
+                                                            <img src={spotify_02} alt="spotify_02" style={{ width: '80%', height: '80%' }} />
+                                                        </Paper>
+                                                    </Grid>
+                                                    <Grid item xs={4} className={classes.screenshot} onClick={() => handleImageOpen(spotify_03, "Third")}>
+                                                        <Paper className={classes.paper}>
+                                                            <img src={spotify_03} alt="spotify_03" style={{ width: '80%', height: '80%' }} />
+                                                        </Paper>
+                                                    </Grid>
+                                                    <Grid item xs={4} className={classes.screenshot} onClick={() => handleImageOpen(spotify_04, "Fourth")}>
+                                                        <Paper className={classes.paper}>
+                                                            <img src={spotify_04} alt="spotify_04" style={{ width: '80%', height: '80%' }} />
+                                                        </Paper>
+                                                    </Grid>
+                                                    <Grid item xs={4} className={classes.screenshot} onClick={() => handleImageOpen(spotify_05, "Fifth")}>
+                                                        <Paper className={classes.paper}>
+                                                            <img src={spotify_05} alt="spotify_05" style={{ width: '80%', height: '80%' }} />
+                                                        </Paper>
+                                                    </Grid>
+                                                    <Dialog
+                                                        maxWidth="lg"
+                                                        open={imgOpen.window}
+                                                        TransitionComponent={Transition}
+                                                        onClick={handleImageClose}
+                                                        aria-labelledby="image"
+                                                        style={{ width: '70%', margin: 'auto' }}
+                                                    >
+                                                        <DialogTitle>{imgOpen.order} Image</DialogTitle>
+                                                        <DialogContent>
+                                                            <img src={imgOpen.name} alt="spotify_zoomed" style={{ width: "100%", height: "100%", margin: 'auto' }} />
+                                                        </DialogContent>
+                                                        <DialogActions>
+                                                            <Button onClick={handleImageClose} color="primary">
+                                                                Close
+                                                            </Button>
+                                                        </DialogActions>
+                                                    </Dialog>
                                                 </Grid>
                                             </Grid>
                                         </Grid>
